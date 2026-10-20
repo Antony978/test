@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Table</title>
+  <link rel="stylesheet" href="css/data.css">
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>People Directory</h1>
+      <p>Search and sort the data instantly.</p>
+    </header>
+
+    <section class="toolbar">
+      <input type="search" id="searchInput" placeholder="Search by name, city or job..." aria-label="Search">
+
+      <div class="sort-buttons">
+        <button type="button" class="sort-btn" data-sort="name">Sort by Name <span class="arrow"></span></button>
+        <button type="button" class="sort-btn" data-sort="age">Sort by Age <span class="arrow"></span></button>
+        <button type="button" class="sort-btn" data-sort="city">Sort by City <span class="arrow"></span></button>
+      </div>
+    </section>
+
+    <p class="count" id="resultCount"></p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Job</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+      <p class="empty" id="emptyMessage" hidden>No results found.</p>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+</body>
+</html>
